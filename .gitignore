@@ -1,0 +1,6 @@
+# pristine emulator binaries saved by `emu-icon apply` (~60 MB each); never commit
+backups/
+# compiled Swift renderer, rebuilt on first run
+lib/round
+__pycache__/
+.DS_Store

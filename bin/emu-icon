@@ -1,0 +1,22 @@
+#!/bin/bash
+# emu-icon: entry point for android-emu-squircle.
+#
+#   emu-icon status            show whether the squircle icon is applied
+#   emu-icon apply [--force]   patch the emulator binary
+#   emu-icon restore           put back the most recent pristine backup
+#
+# This wrapper only resolves its own location (so it works from any directory
+# and through symlinks' target dir) and runs lib/patch.py with the system
+# Python in isolated mode (-I): no user site-packages and no current-directory
+# imports, so the script behaves the same regardless of the caller's environment.
+set -euo pipefail
+
+SELF="${BASH_SOURCE[0]}"
+while [ -L "$SELF" ]; do                       # follow symlinks (e.g. ~/bin/emu-icon -> here)
+    DIR="$(cd "$(dirname "$SELF")" && pwd)"
+    SELF="$(readlink "$SELF")"
+    [[ "$SELF" != /* ]] && SELF="$DIR/$SELF"
+done
+ROOT="$(cd "$(dirname "$SELF")/.." && pwd)"
+
+exec /usr/bin/python3 -I "$ROOT/lib/patch.py" "$@"

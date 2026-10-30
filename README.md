@@ -1,4 +1,4 @@
-# android-emu-squircle
+# android-emu-squircle-icon
 
 **Give the Android Emulator a proper macOS icon.**
 
@@ -42,15 +42,15 @@ Clone it anywhere. The tool locates its own files, so the folder can live
 wherever you like (a hidden folder in `$HOME` works well):
 
 ```sh
-git clone https://github.com/mrcsxsiq/android-emu-squircle.git ~/.android-emu-squircle
+git clone https://github.com/mrcsxsiq/android-emu-squircle-icon.git ~/.android-emu-squircle-icon
 ```
 
 Optional: put the command on your `PATH`.
 
 ```sh
-ln -s ~/.android-emu-squircle/bin/emu-icon /usr/local/bin/emu-icon
+ln -s ~/.android-emu-squircle-icon/bin/emu-icon /usr/local/bin/emu-icon
 # or an alias in ~/.zshrc:
-alias emu-icon="$HOME/.android-emu-squircle/bin/emu-icon"
+alias emu-icon="$HOME/.android-emu-squircle-icon/bin/emu-icon"
 ```
 
 ## Usage

@@ -1,4 +1,4 @@
-"""android-emu-squircle: swap the Android Emulator's circular icon for a macOS squircle.
+"""android-emu-squircle-icon: swap the Android Emulator's circular icon for a macOS squircle.
 
 Background
 ----------
@@ -278,7 +278,7 @@ def cmd_restore():
 
 def main(argv):
     if sys.platform != "darwin":
-        raise SystemExit("error: android-emu-squircle only supports macOS.")
+        raise SystemExit("error: android-emu-squircle-icon only supports macOS.")
     command = argv[1] if len(argv) > 1 else "status"
     if command == "status":
         cmd_status()

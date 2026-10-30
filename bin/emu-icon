@@ -1,5 +1,5 @@
 #!/bin/bash
-# emu-icon: entry point for android-emu-squircle.
+# emu-icon: entry point for android-emu-squircle-icon.
 #
 #   emu-icon status            show whether the squircle icon is applied
 #   emu-icon apply [--force]   patch the emulator binary

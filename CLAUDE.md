@@ -4,7 +4,7 @@ Guidance for Claude Code (and other agents) working in this repository.
 
 ## What this project is
 
-`android-emu-squircle` replaces the Android Emulator's circular Dock icon with a
+`android-emu-squircle-icon` replaces the Android Emulator's circular Dock icon with a
 macOS squircle by patching the PNGs embedded in the `qemu-system-*` binary. The
 CLI is `bin/emu-icon` (`status`, `apply [--force]`, `restore`). Read the module
 docstring of `lib/patch.py` first; it explains the whole approach.
